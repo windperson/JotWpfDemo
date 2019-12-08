@@ -12,7 +12,7 @@ namespace JotWpfDemo
         {
             Tracker
                 .Configure<Window>()
-                .Id(w => w.Name, $"{SystemParameters.VirtualScreenWidth}x{SystemParameters.VirtualScreenHeight}")
+                .Id(w => w.Title, $"{SystemParameters.VirtualScreenWidth:F0}x{SystemParameters.VirtualScreenHeight:F0}")
                 .Properties(w => new { w.Top, w.Width, w.Height, w.Left, w.WindowState })
                 .PersistOn(nameof(Window.Closing))
                 .StopTrackingOn(nameof(Window.Closing));
